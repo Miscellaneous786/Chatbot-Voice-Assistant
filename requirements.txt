@@ -1,0 +1,6 @@
+google-generativeai
+transformers
+numpy
+tf-keras
+sentence-transformers
+faiss-cpu
