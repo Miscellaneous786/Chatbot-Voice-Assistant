@@ -89,7 +89,7 @@ def chat_response(user_input, history):
     history.append((user_input, response)) 
 
     emotion = detect_emotion(user_input, response)
-    emotion_image = f'Images/{emotion}.png'
+    emotion_image = f'{emotion}.png'
     return history, emotion_image
 
 custom_css = """
@@ -115,7 +115,7 @@ with gr.Blocks(css=custom_css, theme="soft") as demo:
             user_input = gr.Textbox(placeholder="Type your message here...", show_label=False)
         
         with gr.Column(scale=1):
-            image = gr.Image(r"Images/logo.png", show_label=False, elem_id="logo")
+            image = gr.Image(r"logo.png", show_label=False, elem_id="logo")
             emotion_image = gr.Image(show_label=False, elem_id="emotion-image")
             audio_input = gr.Audio(type="numpy", sources="microphone")
             
